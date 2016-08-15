@@ -2,6 +2,8 @@ require 'securerandom'
 
 class ChatsController < ApplicationController
   def index
+  	chats = current_user.chats
+  	@existing_chats_users = current_user.existing_chats_users
   end
 
   def create
