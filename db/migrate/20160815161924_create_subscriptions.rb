@@ -1,4 +1,4 @@
-class CreateSubscriptionsTable < ActiveRecord::Migration[5.0]
+class CreateSubscriptions < ActiveRecord::Migration[5.0]
   def change
     create_table :subscriptions do |t|
       t.integer :chat_id
