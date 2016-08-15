@@ -6,5 +6,5 @@
 
 this.App = {};
 
-App.cable = ActionCable.createConsumer("/cable");
+App.cable = ActionCable.createConsumer();
 

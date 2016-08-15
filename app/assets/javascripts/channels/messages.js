@@ -1,8 +1,4 @@
 function createMessageChannel() {
-
-	console.log("hello!!")
-	console.log($("#message_chat_id");
-		
 	App.messages = App.cable.subscriptions.create({
 		channel: 'MessagesChannel', chat_id: parseInt($("#message_chat_id").val())
 	},
