@@ -9,7 +9,7 @@ class User < ApplicationRecord
 		existing_chat_users = []
 		chats.each do |chat| 
   		chat.subscriptions.each do |subscription|
-  			existing_chat_users << subscription.user if subscription.user != current_user
+  			existing_chat_users << subscription.user if subscription.user != self
   		end
   	end
   	existing_chat_users
