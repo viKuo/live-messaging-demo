@@ -1,4 +1,7 @@
 Rails.application.configure do
+
+  config.web_socket_server_url = "wss://live-messaging-demo.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://live-messaging-demo.herokuapp.com', 'http://live-messaging-demo.herokuapp.com']
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
