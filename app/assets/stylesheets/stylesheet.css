@@ -1,0 +1,51 @@
+body {
+	font-family:Verdana, sans-serif;
+}
+
+div.container {
+	border:1px dotted black;
+	margin-left:auto;
+	margin-right:auto;
+	width:500px;
+	padding:10px;
+}
+
+div.inline-block {
+	display:inline-block;
+	width:238px;
+	vertical-align: top;
+}
+
+div.align-right{
+	display:inline-block;
+	text-align:right;
+	width:235px;
+	vertical-align: top;
+}
+
+ul {
+	list-style:none;
+	padding-left:10px;
+	font-size:16pt;
+}
+
+h3 {
+	text-align:center;
+	margin-top:10%;
+}
+
+h4 {
+	margin-top:8px;
+	border-bottom:1px solid #d3d3d3;
+}
+
+textarea#message_content {
+	width:480px;
+	height:80px;
+
+}
+
+div.scroll {
+	overflow: auto;
+	height:400px;
+}

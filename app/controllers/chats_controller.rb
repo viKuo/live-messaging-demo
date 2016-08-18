@@ -1,6 +1,7 @@
 require 'securerandom'
 
 class ChatsController < ApplicationController
+	before_action :require_login
   def index
   	chats = current_user.chats
   	@existing_chats_users = current_user.existing_chats_users
@@ -20,15 +21,11 @@ class ChatsController < ApplicationController
 
   def show
     @other_user = User.find(params[:other_user])
-
     @chat = Chat.find_by(id: params[:id])
     @message = Message.new
-    recieved_msgs = @chat.messages.where.not(user_id: current_user.id)
-    recieved_msgs.each {|msg| msg.update(seen: true)}
   end
 
  	private
-
   def find_chat(second_user)
     chats = current_user.chats
     chats.each do |chat|
@@ -39,5 +36,9 @@ class ChatsController < ApplicationController
       end
     end
     nil
+  end
+
+  def require_login
+  	redirect_to new_session_path unless logged_in?
   end
 end
