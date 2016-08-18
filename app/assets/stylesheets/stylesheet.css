@@ -1,0 +1,6 @@
+div.container {
+	border:1px dotted black;
+	position:absolute;
+	left:auto;
+	right:auto;
+}
