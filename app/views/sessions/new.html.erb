@@ -1,21 +1,25 @@
-<%= form_for User.new, url: sessions_path, method: :post do |f| %>
 
-  <%= f.label :username, 'Username: ' %><br>
-  <%= f.text_field :username %><br>
+<div class="inline-block">
+	<%= form_for User.new, url: sessions_path, method: :post do |f| %>
 
-  <%= f.label :password, 'Password: ' %><br>
-  <%= f.password_field :password %><br>
+	  <%= f.label :username, 'Username: ' %><br>
+	  <%= f.text_field :username %><br>
 
-  <%= f.submit 'Login' %>
+	  <%= f.label :password, 'Password: ' %><br>
+	  <%= f.password_field :password %><br>
 
-<% end %>
+	  <%= f.submit 'Login' %>
 
-Available users:
-<ul>
-	<li>user1: 123456</li>
-	<li>user2: 123456</li>
-	<li>user3: 123456</li>
-</ul>
+	<% end %>
+</div>
 
+<div class="align-right">
+	Available users:
+	<ul>
+		<li>user1: 123456</li>
+		<li>user2: 123456</li>
+		<li>user3: 123456</li>
+	</ul>
+</div>
 
 <%= link_to 'Or Register', new_user_path %>
